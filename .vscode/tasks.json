@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Build Cell",
+			"command": "gcc",
+			"args": [
+				"${workspaceFolder}\\src\\main.c",
+				"${workspaceFolder}\\src\\include\\@cell.c",
+				"${workspaceFolder}\\src\\include\\@engine.c",
+				"${workspaceFolder}\\src\\include\\@grid.c",
+
+				"-o",
+				"${workspaceFolder}\\cell",
+				"-I${workspaceFolder}\\SDL2\\include",
+				"-L${workspaceFolder}\\SDL2\\lib",
+				"-lmingw32",
+				"-lSDL2main",
+				"-lSDL2",
+				"-mwindows"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
